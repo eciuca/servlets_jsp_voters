@@ -7,8 +7,10 @@
    <div>
        <form method="post" action="<c:url value="/jsp/update"/>">
            <input type="hidden" name="voterIndex" value="${param.voterIndex}" />
-           <input type="text" name="voterFirstName"  value="${param.firstName}"/>
-           <input type="text" name="voterLastName"  value="${param.lastName}" />
+           <label for="first-name">First Name</label>
+           <input type="text" id="first-name" name="voterFirstName" value="${param.firstName}"/>
+           <label for="last-name">Last Name</label>
+           <input type="text" id="last-name" name="voterLastName" value="${param.lastName}" />
            <input type="submit" value="Update"/>
        </form>
    </div>
