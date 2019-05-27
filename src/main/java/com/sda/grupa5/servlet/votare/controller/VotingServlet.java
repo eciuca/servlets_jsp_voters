@@ -1,4 +1,7 @@
-package com.sda.grupa5.servlet.votare;
+package com.sda.grupa5.servlet.votare.controller;
+
+import com.sda.grupa5.servlet.votare.model.Person;
+import com.sda.grupa5.servlet.votare.service.VotingService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,4 +1,6 @@
-package com.sda.grupa5.servlet.votare;
+package com.sda.grupa5.servlet.votare.service;
+
+import com.sda.grupa5.servlet.votare.model.Person;
 
 import java.util.ArrayList;
 import java.util.List;

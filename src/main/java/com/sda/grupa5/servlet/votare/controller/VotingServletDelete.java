@@ -1,4 +1,6 @@
-package com.sda.grupa5.servlet.votare;
+package com.sda.grupa5.servlet.votare.controller;
+
+import com.sda.grupa5.servlet.votare.service.VotingService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(urlPatterns = "/jsp/delete")
 public class VotingServletDelete extends HttpServlet {

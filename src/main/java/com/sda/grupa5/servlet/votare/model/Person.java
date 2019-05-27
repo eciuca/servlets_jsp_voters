@@ -1,4 +1,4 @@
-package com.sda.grupa5.servlet.votare;
+package com.sda.grupa5.servlet.votare.model;
 
 public class Person {
     private String firstName;

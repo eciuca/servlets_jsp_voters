@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.sda.grupa5.servlet.votare.Person" %>
+<%@ page import="com.sda.grupa5.servlet.votare.model.Person" %>
 <%@ page import="java.util.List" %>
 <html>
 <head>
