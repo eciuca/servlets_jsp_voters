@@ -9,20 +9,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/jsp/delete")
-public class VotingServletDelete extends HttpServlet {
+@WebServlet(urlPatterns = "/jsp")
+public class CreateVoter extends HttpServlet {
 
     private final VotingService votingService;
 
-    public VotingServletDelete() {
+    public CreateVoter() {
         votingService = VotingService.getInstance();
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String voterLastName = req.getParameter("voterLastName");
+        String firstName = req.getParameter("firstName");
+        String lastName = req.getParameter("lastName");
 
-        votingService.deleteVoterByLastName(voterLastName);
+        votingService.addVoter(firstName, lastName);
 
         resp.sendRedirect(req.getContextPath() + "/jsp");
     }

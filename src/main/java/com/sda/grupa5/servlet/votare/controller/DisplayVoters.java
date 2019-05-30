@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/jsp")
-public class VotingServletWithJsp extends HttpServlet {
+public class DisplayVoters extends HttpServlet {
 
     private final VotingService votingService;
 
-    public VotingServletWithJsp() {
+    public DisplayVoters() {
         votingService = VotingService.getInstance();
     }
 
@@ -29,16 +29,6 @@ public class VotingServletWithJsp extends HttpServlet {
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/jsp/voters.jsp")
                 .forward(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String firstName = req.getParameter("firstName");
-        String lastName = req.getParameter("lastName");
-
-        votingService.addVoter(firstName, lastName);
-
-        resp.sendRedirect(req.getContextPath() + "/jsp");
     }
 
 }

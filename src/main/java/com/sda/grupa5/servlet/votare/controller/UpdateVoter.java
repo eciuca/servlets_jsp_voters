@@ -10,19 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/jsp/update")
-public class VotingServletUpdate extends HttpServlet {
+public class UpdateVoter extends HttpServlet {
 
     private final VotingService votingService;
 
-    public VotingServletUpdate() {
+    public UpdateVoter() {
         votingService = VotingService.getInstance();
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext()
-                .getRequestDispatcher("/WEB-INF/jsp/update_voter.jsp")
-                .forward(req, resp);
     }
 
     @Override
