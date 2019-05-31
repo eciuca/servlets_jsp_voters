@@ -42,7 +42,7 @@
 
 <h2>Add voter</h2>
 <div>
-    <form method="post" action="<c:url value="/jsp"/>">
+    <form method="post" action="<c:url value="/jsp/create"/>">
         <label for="first-name">First Name</label>
         <input type="text" id="first-name" name="firstName"/>
         <label for="last-name">Last Name</label>

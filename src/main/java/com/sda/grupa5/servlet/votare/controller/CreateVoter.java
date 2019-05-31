@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/jsp")
+@WebServlet(urlPatterns = "/jsp/create")
 public class CreateVoter extends HttpServlet {
 
     private final VotingService votingService;
