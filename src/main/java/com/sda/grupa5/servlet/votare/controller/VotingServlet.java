@@ -40,6 +40,4 @@ public class VotingServlet extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
     }
-
-
 }
