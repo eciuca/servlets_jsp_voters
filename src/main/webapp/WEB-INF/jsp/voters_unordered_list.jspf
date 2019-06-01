@@ -1,0 +1,9 @@
+<%@ page import="com.sda.grupa5.servlet.votare.model.Person" %>
+<%@ page import="java.util.List" %>
+<h2>Scriptlet</h2>
+<ul>
+    <% for (Person voter : ((List<Person>) request.getAttribute("voters"))) {%>
+    <li><%=voter.getFirstName()%> <%=voter.getLastName()%>
+    </li>
+    <% } %>
+</ul>

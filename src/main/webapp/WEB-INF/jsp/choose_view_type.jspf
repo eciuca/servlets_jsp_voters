@@ -1,0 +1,10 @@
+<form method="get" action="<c:url value="/jsp"/>">
+    <h3>What do you want to use to display the voters</h3>
+    <label for="view-type-sc">Scriptlet</label>
+    <input type="radio" id="view-type-sc" name="viewType" value="scriptlet"
+    ${cookie.viewType.value == 'scriptlet' ? 'checked="checked"' : ''} />
+    <label for="view-type-el">Expression Language</label>
+    <input type="radio" id="view-type-el" name="viewType" value="el"
+    ${cookie.viewType.value == 'el' ? 'checked="checked"' : ''} />
+    <input type="submit" value="Update view" />
+</form>
