@@ -19,7 +19,8 @@ public class DeleteVoter extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         String voterLastName = req.getParameter("voterLastName");
 
         votingService.deleteVoterByLastName(voterLastName);

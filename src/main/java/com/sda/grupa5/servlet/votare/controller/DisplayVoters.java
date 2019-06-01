@@ -21,7 +21,8 @@ public class DisplayVoters extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         List<Person> voters = votingService.getVotersList();
 
         req.setAttribute("voters", voters);

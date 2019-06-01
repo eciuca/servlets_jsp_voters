@@ -19,14 +19,16 @@ public class UpdateVoter extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/jsp/update_voter.jsp")
                 .forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         Integer voterIndex = Integer.parseInt(req.getParameter("voterIndex"));
         String voterLastName = req.getParameter("voterLastName");
         String voterFirstName = req.getParameter("voterFirstName");
