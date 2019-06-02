@@ -4,4 +4,36 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <servlet>
+        <servlet-name>listener-and-servlet</servlet-name>
+        <servlet-class>com.sda.grupa5.servlet.votare.controller.ListenerAndFilterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listener-and-servlet</servlet-name>
+        <url-pattern>/filist</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>com.sda.grupa5.servlet.votare.CountingListener</listener-class>
+    </listener>
+
+    <!--    Filters    -->
+    <filter>
+        <filter-name>FullnameUpperCaseFilter</filter-name>
+        <filter-class>com.sda.grupa5.servlet.votare.filters.FullnameUpperCaseFilter</filter-class>
+    </filter>
+
+    <!--    Filter mappings    -->
+    <filter-mapping>
+        <filter-name>FirstLoggingFilter</filter-name>
+        <url-pattern>/filist</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>FullnameUpperCaseFilter</filter-name>
+        <url-pattern>/filist</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>OnlyNameInitialsFilterCaseFilter</filter-name>
+        <url-pattern>/filist</url-pattern>
+    </filter-mapping>
 </web-app>
